@@ -68,6 +68,13 @@ return [
     'timezone' => 'UTC',
 
     /*
+    | Timestamps are stored in UTC (above). API responses convert them to this zone so the mobile
+    | app receives ISO-8601 dates with the Philippine offset, e.g. 2026-10-01T09:00:00+08:00.
+    */
+
+    'api_timezone' => env('APP_API_TIMEZONE', 'Asia/Manila'),
+
+    /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
     |--------------------------------------------------------------------------
